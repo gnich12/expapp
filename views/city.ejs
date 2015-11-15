@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<% include templates/header.ejs%>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+<p><%= name%></p>
+<table>
+    <tr>
+        <th>
+            City
+        </th>
+        <th>
+            Country Code
+        </th>
+        <th>
+            Discrict
+        </th>
+        <th>Population</th>
+    </tr>
+
+        <% cities.forEach(function(i){%>
+            <tr>
+                <td><%=i.Name%></td>
+                <td><%=i.CountryCode%></td>
+                <td><%=i.District%></td>
+                <td><%=i.Population%></td>
+            </tr>
+
+        <%});%>
+
+
+</table>
+
+</body>
+</html>
